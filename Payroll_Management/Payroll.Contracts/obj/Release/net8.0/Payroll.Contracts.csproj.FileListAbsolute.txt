@@ -1,0 +1,15 @@
+D:\Project_POC\Payroll_Management\Payroll.Contracts\bin\Release\net8.0\Payroll.Contracts.deps.json
+D:\Project_POC\Payroll_Management\Payroll.Contracts\bin\Release\net8.0\Payroll.Contracts.dll
+D:\Project_POC\Payroll_Management\Payroll.Contracts\bin\Release\net8.0\Payroll.Contracts.pdb
+D:\Project_POC\Payroll_Management\Payroll.Contracts\bin\Release\net8.0\Payroll.Domain.dll
+D:\Project_POC\Payroll_Management\Payroll.Contracts\bin\Release\net8.0\Payroll.Domain.pdb
+D:\Project_POC\Payroll_Management\Payroll.Contracts\obj\Release\net8.0\Payroll.Contracts.csproj.AssemblyReference.cache
+D:\Project_POC\Payroll_Management\Payroll.Contracts\obj\Release\net8.0\Payroll.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+D:\Project_POC\Payroll_Management\Payroll.Contracts\obj\Release\net8.0\Payroll.Contracts.AssemblyInfoInputs.cache
+D:\Project_POC\Payroll_Management\Payroll.Contracts\obj\Release\net8.0\Payroll.Contracts.AssemblyInfo.cs
+D:\Project_POC\Payroll_Management\Payroll.Contracts\obj\Release\net8.0\Payroll.Contracts.csproj.CoreCompileInputs.cache
+D:\Project_POC\Payroll_Management\Payroll.Contracts\obj\Release\net8.0\Payroll..DB66D3FF.Up2Date
+D:\Project_POC\Payroll_Management\Payroll.Contracts\obj\Release\net8.0\Payroll.Contracts.dll
+D:\Project_POC\Payroll_Management\Payroll.Contracts\obj\Release\net8.0\refint\Payroll.Contracts.dll
+D:\Project_POC\Payroll_Management\Payroll.Contracts\obj\Release\net8.0\Payroll.Contracts.pdb
+D:\Project_POC\Payroll_Management\Payroll.Contracts\obj\Release\net8.0\ref\Payroll.Contracts.dll

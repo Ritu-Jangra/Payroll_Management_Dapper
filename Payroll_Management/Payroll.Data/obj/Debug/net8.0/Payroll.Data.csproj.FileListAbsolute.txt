@@ -1,0 +1,15 @@
+D:\Project_POC\Payroll_Management\Payroll.Data\bin\Debug\net8.0\Payroll.Data.deps.json
+D:\Project_POC\Payroll_Management\Payroll.Data\bin\Debug\net8.0\Payroll.Data.dll
+D:\Project_POC\Payroll_Management\Payroll.Data\bin\Debug\net8.0\Payroll.Data.pdb
+D:\Project_POC\Payroll_Management\Payroll.Data\bin\Debug\net8.0\Payroll.Domain.dll
+D:\Project_POC\Payroll_Management\Payroll.Data\bin\Debug\net8.0\Payroll.Domain.pdb
+D:\Project_POC\Payroll_Management\Payroll.Data\obj\Debug\net8.0\Payroll.Data.csproj.AssemblyReference.cache
+D:\Project_POC\Payroll_Management\Payroll.Data\obj\Debug\net8.0\Payroll.Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\Project_POC\Payroll_Management\Payroll.Data\obj\Debug\net8.0\Payroll.Data.AssemblyInfoInputs.cache
+D:\Project_POC\Payroll_Management\Payroll.Data\obj\Debug\net8.0\Payroll.Data.AssemblyInfo.cs
+D:\Project_POC\Payroll_Management\Payroll.Data\obj\Debug\net8.0\Payroll.Data.csproj.CoreCompileInputs.cache
+D:\Project_POC\Payroll_Management\Payroll.Data\obj\Debug\net8.0\Payroll..65FED167.Up2Date
+D:\Project_POC\Payroll_Management\Payroll.Data\obj\Debug\net8.0\Payroll.Data.dll
+D:\Project_POC\Payroll_Management\Payroll.Data\obj\Debug\net8.0\refint\Payroll.Data.dll
+D:\Project_POC\Payroll_Management\Payroll.Data\obj\Debug\net8.0\Payroll.Data.pdb
+D:\Project_POC\Payroll_Management\Payroll.Data\obj\Debug\net8.0\ref\Payroll.Data.dll

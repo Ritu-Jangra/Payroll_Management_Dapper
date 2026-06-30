@@ -1,0 +1,69 @@
+﻿@model ApplyLeaveViewModel
+@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor HttpContextAccessor
+
+@{
+    ViewData["Title"] = "ApplyLeave";
+    var token = Context.Session.GetString("AccessToken") ?? "";
+}
+
+<div id="notificationAlerts" class="position-fixed top-0 end-0 p-3" style="z-index: 1050;">
+</div>
+<h1>Apply Leave</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="ApplyLeave">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="StartDate" class="control-label"></label>
+                <input asp-for="StartDate" class="form-control" />
+                <span asp-validation-for="StartDate" class="text-danger"></span>
+            </div><br />
+            <div class="form-group">
+                <label asp-for="EndDate" class="control-label"></label>
+                <input asp-for="EndDate" class="form-control" />
+                <span asp-validation-for="EndDate" class="text-danger"></span>
+            </div><br />
+            <div class="form-group">
+             <select asp-for="Reason" asp-items="Html.GetEnumSelectList<ReasonType>()" class="form-control">
+                 <option value="">-- Select Status --</option>
+             </select>
+            </div><br />
+            <div class="form-group">
+                <input type="submit" value="Apply" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="MyLeaves">Back to List</a>
+</div>
+
+@section Scripts {
+    @* <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/8.0.17/signalr.min.js"></script>
+    <script>
+           console.log("SignalR script loaded");
+
+        const token = '@token';
+
+        console.log("TOKEN:", token);
+        const connection = new signalR.HubConnectionBuilder()
+            .withUrl("/leaveHub", {
+                accessTokenFactory: () => token
+            })
+            .withAutomaticReconnect()
+            .build();
+
+        connection.on("ReceiveLeaveNotification", (leave) => {
+            console.log("Received:", leave);
+        });
+
+        connection.start()
+        .then(() => console.log("SignalR CONNECTED"))
+        .catch(err => console.error("SignalR ERROR", err));
+    </script> *@
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

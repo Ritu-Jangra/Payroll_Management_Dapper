@@ -1,0 +1,135 @@
+﻿@model IEnumerable<LeaveViewModel>
+
+@{
+    ViewData["Title"] = "MyLeaves";
+}
+@if (Model != null)
+{
+<h1>My Leaves</h1>
+
+@* <a href="javascript:(0)" class="btn btn-primary" id="applyLeave">Apply Leave</a>
+<div class="container mt-4" id="applyLeaveDiv" style="display:none">
+    <h1>Apply Leave</h1>
+    <hr />
+        <div class="row g-3">
+            <div class="col-md-4">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <label class="control-label">Start Date</label>
+                        <input id="startDate" class="form-control" />
+                        <span id="startDateValidation" class="text-danger"></span>
+                    </div><br />
+                    <div class="form-group">
+                        <label class="control-label">End Date</label>
+                        <input id="EndDate" class="form-control" />
+                        <span id="EndDateValidation" class="text-danger"></span>
+                    </div><br />
+                    <div class="form-group">
+                     <select id="Reason" asp-items="Html.GetEnumSelectList<ReasonType>()" class="form-control">
+                         <option value="">-- Select Status --</option>
+                     </select>
+                    </div><br />
+                    <div class="form-group">
+                        <input type="submit" id="applyButton" value="Apply" class="btn btn-primary" />
+                        <input type="button" id="backButtom" value="Back" class="btn btn-danger" />
+                    </div>
+            </div>
+        </div>
+</div> *@
+
+<p>
+    <a asp-action="ApplyLeave">Apply Leave</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            @* <th>
+                @Html.DisplayNameFor(model => model.LeaveId)
+            </th> *@
+            <th>
+                @Html.DisplayNameFor(model => model.StartDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EndDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reason)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmployeeName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ActionByName)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+          @*   <td>
+                @Html.DisplayFor(modelItem => item.LeaveId)
+            </td> *@
+            <td>
+                @Html.DisplayFor(modelItem => item.StartDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EndDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Reason)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmployeeName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ActionByName)
+            </td>
+            <td>
+            @switch (item.Status)
+            {
+                case "Pending":
+                    @Html.ActionLink("Update", "UpdateLeave", new { id = item.LeaveId })
+                    <span> | </span>
+                    @Html.ActionLink("Delete", "DeleteLeave", new { id = item.LeaveId })
+                    break;
+
+                default:
+                    <span class="badge bg-secondary">@item.Status</span>
+                    break;
+            }
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+}
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("#applyLeave").click(function(){
+            $("#applyLeaveDiv").show();
+            $("#applyLeave").hide();
+        });
+
+        $("#applyButton").click(function(){
+           // $.ajax({
+           //     type:"POST",
+           //     url:"Url()"
+           // });
+        });
+
+        $("#backButtom").click(function(){
+            $("#applyLeave").show();
+            $("#applyLeaveDiv").hide();
+        });
+    });
+</script>

@@ -1,0 +1,11 @@
+D:\Project_POC\Payroll_Management\Payroll.Domain\bin\Release\net8.0\Payroll.Domain.deps.json
+D:\Project_POC\Payroll_Management\Payroll.Domain\bin\Release\net8.0\Payroll.Domain.dll
+D:\Project_POC\Payroll_Management\Payroll.Domain\bin\Release\net8.0\Payroll.Domain.pdb
+D:\Project_POC\Payroll_Management\Payroll.Domain\obj\Release\net8.0\Payroll.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Project_POC\Payroll_Management\Payroll.Domain\obj\Release\net8.0\Payroll.Domain.AssemblyInfoInputs.cache
+D:\Project_POC\Payroll_Management\Payroll.Domain\obj\Release\net8.0\Payroll.Domain.AssemblyInfo.cs
+D:\Project_POC\Payroll_Management\Payroll.Domain\obj\Release\net8.0\Payroll.Domain.csproj.CoreCompileInputs.cache
+D:\Project_POC\Payroll_Management\Payroll.Domain\obj\Release\net8.0\Payroll.Domain.dll
+D:\Project_POC\Payroll_Management\Payroll.Domain\obj\Release\net8.0\refint\Payroll.Domain.dll
+D:\Project_POC\Payroll_Management\Payroll.Domain\obj\Release\net8.0\Payroll.Domain.pdb
+D:\Project_POC\Payroll_Management\Payroll.Domain\obj\Release\net8.0\ref\Payroll.Domain.dll

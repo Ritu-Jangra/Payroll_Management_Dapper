@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "serviceConnectorResourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('serviceConnectorResourceGroupName')]/providers/Microsoft.Web/sites/MyPayrollAPP/providers/Microsoft.ServiceLinker/linkers/DBConnection_5A4FA67939",
+      "secretStore": "AzureAppSettings",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/my-payroll-db-cc/databases/payroll-db",
+      "type": "mssql.azure",
+      "connectionId": "DBConnection"
+    }
+  }
+}

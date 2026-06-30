@@ -1,0 +1,135 @@
+﻿@model IEnumerable<LeaveViewModel>
+
+@{
+    ViewData["Title"] = "LeaveRequests";
+}
+
+@if (Model != null)
+{
+<h1>Leave Requests</h1>
+<div class="container mt-4">
+    <div class="row g-3">
+
+        <div class="col-md-3">
+            <div class="card shadow-sm border-0 rounded-3 text-center p-3">
+                <h6 class="text-muted">Total Leave Requests</h6>
+                <h2 id="overAllRequests" class="fw-bold text-primary mb-0"></h2>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card shadow-sm border-0 rounded-3 text-center p-3">
+                <h6 class="text-muted">Pending</h6>
+                <h2 id="pendingRequests" class="fw-bold text-warning mb-0"></h2>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card shadow-sm border-0 rounded-3 text-center p-3">
+                <h6 class="text-muted">Approved</h6>
+                <h2 id="approvedRequests" class="fw-bold text-success mb-0"></h2>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card shadow-sm border-0 rounded-3 text-center p-3">
+                <h6 class="text-muted">Rejected</h6>
+                <h2 id="rejectedRequests" class="fw-bold text-danger mb-0"></h2>
+            </div>
+        </div>
+
+    </div>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            @* <th>
+                @Html.DisplayNameFor(model => model.LeaveId)
+            </th> *@
+            <th>
+                @Html.DisplayNameFor(model => model.StartDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EndDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reason)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmployeeName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ActionByName)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model) {
+            <tr>
+               @*  <td>
+                    @Html.DisplayFor(modelItem => item.LeaveId)
+                </td> *@
+                <td>
+                    @Html.DisplayFor(modelItem => item.StartDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EndDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Reason)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Status)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EmployeeName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ActionByName)
+                </td>
+                <td>
+                @switch (item.Status)
+                {
+                    case "Pending":
+
+                        <form asp-action="ApproveLeave" method="post" style="display:inline;">
+                            @Html.AntiForgeryToken()
+                            <input type="hidden" name="id" value="@item.LeaveId" />
+                            <button type="submit" class="btn btn-sm btn-success">Approve</button>
+                        </form>
+
+                        <form asp-action="RejectLeave" method="post" style="display:inline;">
+                            @Html.AntiForgeryToken()
+                            <input type="hidden" name="id" value="@item.LeaveId" />
+                            <button type="submit" class="btn btn-sm btn-danger">Reject</button>
+                        </form>
+
+                        break;
+
+                    default:
+                        <span class="badge bg-secondary">@item.Status</span>
+                        break;
+                }
+                </td>
+            </tr>
+    }
+    </tbody>
+</table>
+}
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        var overAllRequests =  @(Model?.Count() ?? 0);
+        var pendingRequests = @(Model?.Count(x => x.Status == "Pending") ?? 0);
+        var approvedRequests = @(Model?.Count(x => x.Status == "Approved") ?? 0);
+        var rejectedRequests = @(Model?.Count(x => x.Status == "Rejected") ?? 0);
+        $("#overAllRequests").text(overAllRequests);
+        $("#pendingRequests").text(pendingRequests);
+        $("#approvedRequests").text(approvedRequests);
+        $("#rejectedRequests").text(rejectedRequests);
+    });
+</script>

@@ -1,6 +1,6 @@
 # 💼 Payroll Management System
 
-A web-based **Payroll Management System** built using **ASP.NET Core Web API, ASP.NET Core MVC, Dapper ORM, and SQL Server** to manage employees, salaries, payslips, and leave requests with secure role-based access control.
+A web-based **Payroll Management System** built using **ASP.NET Core Web API, ASP.NET Core MVC, Dapper ORM, and SQL Server** to manage employees, salaries and leave requests with secure role-based access control.
 
 ## 🛠️ Tech Stack
 
